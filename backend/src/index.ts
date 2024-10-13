@@ -1,12 +1,15 @@
-import express from 'express'
-import shortnerRoute from "./routes/shortner.route"
+import express from "express";
+import shortnerRoute from "./routes/shortner.route";
+import dotenv from "dotenv";
 
-const port = 5000
-const app = express()
+dotenv.config();
 
+const port = 5000;
+const app = express();
+app.use(express.json());
 
-app.listen (port, () =>{
-    console.log("server started at port : ", port);
-})
+app.use("/api/controller/shortner", shortnerRoute);
 
-app.use("/api/controller/shortner",shortnerRoute)
+app.listen(port, () => {
+  console.log("server started at port : ", port);
+});

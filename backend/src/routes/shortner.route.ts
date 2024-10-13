@@ -1,10 +1,10 @@
 import express from "express"
-import { createShortendUrl, getOriginalUrl } from "../controller/shortner.controller"
+import { createUrl, getOriginalUrl } from "../controller/shortner.controller"
 
 
 const router = express.Router()
 
-router.post("/create" , createShortendUrl)
+router.post("/create", createUrl)
 router.get("/get/:url" , getOriginalUrl)
 
 
