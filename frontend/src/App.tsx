@@ -1,14 +1,13 @@
-
-
+import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Navbar";
 
 function App() {
-
-
   return (
-    <>
-      <h1 className="">Hello world</h1>
-    </>
-  )
+    <div >
+      <Navbar />
+      <HeroSection />
+    </div>
+  );
 }
 
-export default App
+export default App;
